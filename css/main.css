@@ -1,0 +1,160 @@
+/* COMMON */
+.body__container {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* BTN */
+.btn {
+  height: 34px;
+  background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.btn:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.btn.btn--primary {
+  border: 1px solid #65b836;
+  color: #fff;
+  background: #55a532 linear-gradient(#91dd70, #55ae2e);
+}
+
+/* INPUT TEXT */
+.input--text {
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  /* inset 안쪽 그림자 x축 이동거리 0 y는 1 블러 2px 그림자 색 */
+  font-size: 16px;
+}
+
+.input--text:focus {
+  border-color: #51a7e8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
+    0 0 5px rgba(81, 167, 232, 0.5);
+} /* 쉼표 통해 다중 그림자 삽입 가능*/
+
+/* Vendor Prefix (브라우저 업체별 접두사)
+업체별 접두사를 통해 이 기능은 표준 기능은 아니지만, 
+현재 브라우저에서 실험적으로 제공되고 있는 기능이라는 것을 알려줌 */
+.input--text::-webkit-input-placeholder {
+  color: #cacaca;
+}
+.input--text::-ms-input-placeholder {
+  color: #cacaca;
+}
+.input--text::-moz-input-placeholder {
+  color: #cacaca;
+} /* 파이어폭스 */
+
+/* HEADER */
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  background-color: #fff;
+}
+
+header .inner {
+  max-width: 980px;
+  /* 왜 inner에? : 부모요소가 자식요소에 영향을 받기 때문에 한번만 입력 가능 */
+  height: 78px;
+  margin: 0 auto;
+  /* margin: 0 auto; 로 가운데정렬 시 주의사항
+: 특정한 요소의 가로 사이즈가 정해져 있어야! */
+  background: rosybrown;
+  position: relative;
+}
+
+header .menu-group {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  gap: 10px;
+  width: 50%;
+}
+
+header .logo a {
+  background: url("../img/logo.svg");
+  width: 32px;
+  height: 32px;
+  display: block;
+  text-indent: -9999px;
+  /* 화면에선 사라졌지만 html의 구조적으로는 텍스트 존재하기 때문에 대체 텍스트의 역할
+  -9999: 대체 텍스트 기법 사용 인식 */
+}
+
+header .logo a:hover {
+  background: url("../img/logo_on.svg");
+}
+
+header .main-menu {
+  display: flex;
+}
+
+header .main-menu li a {
+  /* a 태그는 기본 display가 inline
+  inline요소는 padding의 위 아래 값 제대로 사용할 수 X */
+  display: block;
+  padding: 10px;
+  /* 클릭 가능한 너비 확보 */
+  color: #3c4146;
+  text-decoration: none;
+}
+
+header .main-menu li a:hover {
+  color: #4078c0;
+}
+
+header .sign-group {
+  background-color: yellow;
+  display: flex;
+}
+
+header .btn-group {
+  background: violet;
+}
+
+header .btn-group a {
+  text-decoration: none;
+}
+
+header form {
+  background-color: teal;
+}
+
+header .sub-menu {
+  background-color: turquoise;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 200px;
+}
+
+header .sub-menu li a {
+  text-decoration: none;
+}
