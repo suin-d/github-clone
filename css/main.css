@@ -71,6 +71,20 @@
   color: #cacaca;
 } /* 파이어폭스 */
 
+/* FLOAT CLEARFIX */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.float--left {
+  float: left;
+}
+.float--right {
+  float: right;
+}
+/* html에 float 클래스만 부여하면 float내용 정의 가능 */
+
 /* HEADER */
 header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.75);
@@ -85,7 +99,6 @@ header .inner {
   margin: 0 auto;
   /* margin: 0 auto; 로 가운데정렬 시 주의사항
 : 특정한 요소의 가로 사이즈가 정해져 있어야! */
-  background: rosybrown;
   position: relative;
 }
 
@@ -131,30 +144,62 @@ header .main-menu li a:hover {
 }
 
 header .sign-group {
-  background-color: yellow;
   display: flex;
+  align-items: center;
+  height: 100%;
+  /* 높이값을 부모요소의 inner에 맞추기 위해 height 100% 먼저 부여*/
 }
 
 header .btn-group {
-  background: violet;
+  order: 2;
+  /* order 통해 배치 순서 정의 */
+  display: flex;
+}
+
+header .btn-group .sign-in {
+  margin-right: 4px;
 }
 
 header .btn-group a {
   text-decoration: none;
 }
 
-header form {
-  background-color: teal;
+#search-form {
+  /* id 선택자는 고유한 요소이기 때문에 부모 요소 명시 생략 가능 */
+  order: 1;
+  margin-right: 12px;
+}
+
+#search {
+  width: 160px;
+  font-size: 14px;
+}
+
+#search + [type="submit"] {
+  /* 형제 선택자 + */
+  display: none;
 }
 
 header .sub-menu {
-  background-color: turquoise;
   display: flex;
-  justify-content: space-between;
+  margin-right: 10px;
+  /* height: 100%;
+  align-items: center; */
+  /* justify-content: space-between;
   padding: 10px;
-  width: 200px;
+  width: 200px; */
+  /* order:0; 생략가능 */
 }
 
 header .sub-menu li a {
   text-decoration: none;
+  padding: 8px;
+  display: block;
+  /* 기본적으로 a태그는 inline 요소, padding 위아래 값 제대로 못 가지기 때문에 block 요소로 */
+  font-size: 13px;
+  color: #3c4146;
+}
+
+header .sub-menu li a:hover {
+  color: #4078c0;
 }
