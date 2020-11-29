@@ -93,15 +93,29 @@
       <div class="inner">
         <div class="summary">
           <div class="summary__title">
-            How people build software
+            How&nbsp;people build&nbsp;software
+            <!-- &nbsp; 로 단어 연결 => 자연스러운 줄바꿈 가능
+            br태그를 쓰면 반응형이 됐을 때 문제! -->
           </div>
           <div class="summary__description">
-            Millions of developers use GitHub to build personal projects, support their businesses, and work together on open source technologies.
+            Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
           </div>
         </div>
-
-        <form action="" method="POST" id="sign=form">
-
+        <!-- 회원가입폼 -->
+        <form action="" method="POST" id="sign-form">
+          <ul>
+            <li><input type="text" class="input--text" placeholder="Pick a username"></li>
+              <!-- input태그 기본적으로 inline 요소 -> 목록화 ul 태그 -->
+            <li><input type="email" class="input--text" placeholder="Your email address"></li>
+            <li><input type="password" class="input--text" placeholder="Create a password">
+                <p class="caption">Use at least one letter, one numeral, and seven characters.</p>
+            </li>
+            <li>
+              <!-- <input type="submit" class="btn btn--primary">Sign up for GitHub</input> -->
+              <button type="submit" class="btn btn--primary">Sign up for GitHub</button>     
+              <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</p>
+            </li>
+          </ul>
         </form>
       </div>
     </section>

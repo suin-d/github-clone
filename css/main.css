@@ -86,7 +86,7 @@
 /* html에 float 클래스만 부여하면 float내용 정의 가능 */
 
 /* SUMMARY */
-.summrary {
+.summary {
 }
 
 .summary__title {
@@ -268,6 +268,18 @@ header .sub-menu li a:hover {
 .section--visual .inner {
   padding: 160px 0;
   /* 위아래 내부 여백 */
+  display: flex;
+  /* summary와 회원가입양식 수평구조 */
+}
+
+.section--visual .summary {
+  /* flex-grow: 1; 
+  /* summary를 가변하는 영역으로 차지하도록 */
+  /* flex-basis: 0; */
+  /* flex-basis:auto;일 때 발생하는 문제(summary 영역의 비중 차지) 해결 */
+  flex: 1;
+  /* flex 단축 속성 */
+  margin-right: 90px;
 }
 
 .section--visual .summary__title {
@@ -280,4 +292,46 @@ header .sub-menu li a:hover {
 .section--visual .summary__description {
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 25px rgba(0, 0, 0, 0.75);
+}
+
+#sign-form {
+  width: 340px;
+  /* 부모요소에서 가로 길이 한번에 제어 */
+  margin-top: 16px;
+  /* 위쪽 여백 줘서 라인 맞추기 */
+}
+
+#sign-form li {
+  margin-bottom: 17px;
+}
+
+#sign-form li:last-child {
+  margin-bottom: 0;
+  /* 가장 마지막 태그 아래 여백 사용 x */
+}
+
+#sign-form .input--text {
+  width: 100%;
+  height: 40px;
+}
+
+#sign-form .caption {
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  /* 흰색 투명도 */
+  line-height: 1.5;
+  text-align: center;
+}
+
+#sign-form [type="submit"] {
+  width: 100%;
+  height: 62px;
+  padding: 0 25px;
+  font-size: 20px;
+  /* text-align: center; */
+  /* 부모요소(.btn)에서 flex를 사용하고 있기 때문에 
+  수평 정렬은 justify-content: ,
+  수직정렬은 align-items: ; 사용해줘야 */
+  justify-content: center;
 }
