@@ -91,9 +91,6 @@ a {
 /* html에 float 클래스만 부여하면 float내용 정의 가능 */
 
 /* SUMMARY */
-.summary {
-}
-
 .summary__title {
   font-size: 38px;
   font-weight: 300;
@@ -250,6 +247,7 @@ header .sub-menu li a:hover {
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
+  position: relative;
   /* 배경사이즈가 요소의 전체 영역 커버(확대 축소 시 변경 x) */
   /* 여기엔 없지만! 공통적으로 가지고 있는 section클래스에 정의 되어있음! */
 }
@@ -543,6 +541,18 @@ footer .logo:hover svg {
   fill: #4078c0;
 }
 
+#toggle-btn {
+  display: none;
+  background: url("../img/toggle-btn.svg");
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+
 /* @media */
 /* 
   다양한 미디어 유형이나 장치에 따라, 서로 다른 스타일 규칙을 적용
@@ -568,19 +578,21 @@ Large Devices - Desktops - 1024px 이상
 Medium Devices - Tablets - 1024px 이상 
 Small Devices - Tablets + Phones - 768px 이하  
 
+
 */
 
 /* MEDIA */
 @media (max-width: 1024px) {
-  header.secton .inner {
+  header.section .inner {
     max-width: none; 
     /* 초기화가 바로 안되는 이유 => 선택자의 우선순위 */
     height: auto; 
     padding: 0 20px; 
+    display: block; 
   }
-  header .menu-group, 
+  header .menu-group,
   header .sign-group  {
-    float: none;
+     width: 100%;
   }
 
   header .menu-group {
@@ -588,7 +600,7 @@ Small Devices - Tablets + Phones - 768px 이하
   }
 
   header .logo {
-    padding: 12px 0;    
+    padding: 12px;  
   }
 
 
@@ -644,15 +656,12 @@ Small Devices - Tablets + Phones - 768px 이하
     display:none;  
   }
 
+  header .toggle.on {
+    display: block;
+  }
+
   #toggle-btn {
-    background: url("../img/toggle-btn.svg");
-    width: 18px;
-    height: 24px;
-    position: absolute;
-    top: 16px; 
-    right: 20px;
-    cursor: pointer;
-    text-indent: -9999px;
+    display: block;
   }
 
 }
