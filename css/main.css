@@ -1,13 +1,13 @@
 /* COMMON */
 .body__container {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #333;
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 /* BTN */
@@ -29,7 +29,7 @@ a {
 }
 
 .btn:hover::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -78,7 +78,7 @@ a {
 
 /* FLOAT CLEARFIX */
 .clearfix::after {
-  content: "";
+  content: '';
   clear: both;
   display: block;
 }
@@ -153,7 +153,7 @@ header .logo {
 }
 
 header .logo a {
-  background: url("../img/logo.svg");
+  background: url('../img/logo.svg');
   width: 32px;
   height: 32px;
   display: block;
@@ -163,7 +163,7 @@ header .logo a {
 }
 
 header .logo a:hover {
-  background: url("../img/logo_on.svg");
+  background: url('../img/logo_on.svg');
 }
 
 header .main-menu {
@@ -212,7 +212,7 @@ header .btn-group .sign-in {
   font-size: 14px;
 }
 
-#search + [type="submit"] {
+#search + [type='submit'] {
   /* 형제 선택자 + */
   display: none;
 }
@@ -243,17 +243,16 @@ header .sub-menu li a:hover {
 /* VISUAL */
 
 .section--visual {
-  background-image: url("../img/bg.jpg");
+  background-image: url('../img/bg.jpg');
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
-  position: relative;
   /* 배경사이즈가 요소의 전체 영역 커버(확대 축소 시 변경 x) */
   /* 여기엔 없지만! 공통적으로 가지고 있는 section클래스에 정의 되어있음! */
 }
 
 .section--visual::before {
-  content: "";
+  content: '';
   position: absolute;
   /* 무조건 부모 요소에 position absolute를 처리할 수 있는 position값이 있는지 없는지 확인해야
    before라는 가상요소가 붙어있는 선택자: .section--visual, 
@@ -288,15 +287,13 @@ header .sub-menu li a:hover {
 .section--visual .summary__title {
   color: #fff;
   font-size: 54px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 
-               0 1px 25px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 25px rgba(0, 0, 0, 0.75);
   /* 텍스트에 그림자 추가 */
 }
 
 .section--visual .summary__description {
   color: #fff;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 
-               0 1px 25px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 25px rgba(0, 0, 0, 0.75);
 }
 
 #sign-form {
@@ -329,7 +326,7 @@ header .sub-menu li a:hover {
   text-align: center;
 }
 
-#sign-form [type="submit"] {
+#sign-form [type='submit'] {
   width: 100%;
   height: 62px;
   padding: 0 25px;
@@ -342,8 +339,8 @@ header .sub-menu li a:hover {
 }
 
 /* FEATURE */
-.section--feature{
-  background:#f5f5f5;
+.section--feature {
+  background: #f5f5f5;
   padding-top: 66px;
 }
 
@@ -359,7 +356,7 @@ header .sub-menu li a:hover {
   /* 위아래 margin 주면서 가운데 정렬 */
 }
 
-.section--feature .video .video-ratio{
+.section--feature .video .video-ratio {
   height: 0;
   padding-top: 56.25%;
   position: relative;
@@ -371,11 +368,11 @@ header .sub-menu li a:hover {
     16:9 : padding-top: 56.25%
 */
 
-.section--feature .video .video-ratio iframe{
+.section--feature .video .video-ratio iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 100%;
   /* 부모 요소에 최대 넓이와 높이를 다 쓰게 */
 }
@@ -421,7 +418,7 @@ header .sub-menu li a:hover {
 }
 
 .section--feature .tiles li img {
-  max-width:100%; 
+  max-width: 100%;
   padding: 14px 10% 24px;
   /* 좌우에 퍼센트 */
   box-sizing: border-box;
@@ -440,7 +437,6 @@ header .sub-menu li a:hover {
 
 /* WHERE IS */
 .section--where--is {
-
 }
 
 .section--where--is .inner {
@@ -451,9 +447,9 @@ header .sub-menu li a:hover {
   width: 100%;
   height: 400px;
   margin-top: 40px;
-  border: 1px solid rgba(0,0,0, .2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: none;
-  box-shadow: 0 0 20px rgba(0,0,0, .2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   margin-bottom: 80px;
 }
@@ -482,24 +478,21 @@ header .sub-menu li a:hover {
   box-shadow: 0px 1px 2px #e5e5e5;
 }
 
-
-.section--pricing .card .cell1 .btn{
+.section--pricing .card .cell1 .btn {
   height: 50px;
   font-size: 16px;
 }
-
 
 .section--pricing .card .cell2 {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.5;
   flex: 1;
-  border-left: 1px solid #e5e5e5;  
+  border-left: 1px solid #e5e5e5;
 }
 
 /* FOOTER */
 footer {
-
 }
 
 footer .inner {
@@ -507,11 +500,11 @@ footer .inner {
   border-top: 1px solid #eee;
 }
 
-footer .site-links{
+footer .site-links {
   display: flex;
 }
 
-footer .site-links li{
+footer .site-links li {
   font-size: 12px;
   margin-right: 10px;
   color: #767676;
@@ -526,7 +519,7 @@ footer .site-links li a:hover {
 }
 
 footer .logo {
-  position: absolute; 
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -543,7 +536,7 @@ footer .logo:hover svg {
 
 #toggle-btn {
   display: none;
-  background: url("../img/toggle-btn.svg");
+  background: url('../img/toggle-btn.svg');
   width: 18px;
   height: 24px;
   position: absolute;
@@ -584,15 +577,15 @@ Small Devices - Tablets + Phones - 768px 이하
 /* MEDIA */
 @media (max-width: 1024px) {
   header.section .inner {
-    max-width: none; 
+    max-width: none;
     /* 초기화가 바로 안되는 이유 => 선택자의 우선순위 */
-    height: auto; 
-    padding: 0 20px; 
-    display: block; 
+    height: auto;
+    padding: 0 20px;
+    display: block;
   }
   header .menu-group,
-  header .sign-group  {
-     width: 100%;
+  header .sign-group {
+    width: 100%;
   }
 
   header .menu-group {
@@ -600,34 +593,33 @@ Small Devices - Tablets + Phones - 768px 이하
   }
 
   header .logo {
-    padding: 12px;  
+    padding: 12px;
   }
-
 
   header .main-menu {
     display: block;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   header .main-menu li {
-    border-top: 1px solid #e5e5e5; 
+    border-top: 1px solid #e5e5e5;
   }
 
   header .main-menu li a {
-    padding: 16px 0; 
+    padding: 16px 0;
   }
 
   header .sign-group {
-    display: block; 
-    padding: 10px 0 20px; 
+    display: block;
+    padding: 10px 0 20px;
   }
 
   header .btn-group {
-    display:  block;
+    display: block;
   }
 
   header .btn-group .btn {
-    justify-content: center; 
+    justify-content: center;
   }
 
   header .btn-group .sign-in {
@@ -642,8 +634,8 @@ Small Devices - Tablets + Phones - 768px 이하
 
   #search {
     width: 100%;
-    height: 42px; 
-    text-align: center; 
+    height: 42px;
+    text-align: center;
   }
 
   header .sub-menu {
@@ -653,7 +645,7 @@ Small Devices - Tablets + Phones - 768px 이하
   }
 
   header .toggle {
-    display:none;  
+    display: none;
   }
 
   header .toggle.on {
@@ -663,5 +655,4 @@ Small Devices - Tablets + Phones - 768px 이하
   #toggle-btn {
     display: block;
   }
-
 }
