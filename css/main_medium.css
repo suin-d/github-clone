@@ -17,7 +17,7 @@
   }
 
   header .logo {
-    padding: 12px;
+    padding: 12px 12px 12px 0;
   }
 
   header .main-menu {
@@ -102,7 +102,7 @@
 
   /* FEATURE */
   .section--feature .summary {
-    padding: 66px 20px 0 20px;
+    padding: 0px 20px 0 20px;
   }
   /* Float을 사용한 방법 */
   /* .section--feature .tiles ul {
@@ -126,7 +126,7 @@
   }
 
   /* WHERE IS GITHUB */
-  .section--where-is .inner {
+  .section--where--is .inner {
     max-width: none;
     padding: 80px 20px 0 20px;
   }
